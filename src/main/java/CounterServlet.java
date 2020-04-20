@@ -28,7 +28,7 @@ public class CounterServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter(); // store the response.getWriter() in the variable out
 
-        if (reset.equals("reset"))
+        if (reset != null && reset.equalsIgnoreCase("reset"))
             counter = 0; // reset counter to zero
 
         counter++; // increment the counter for every request
