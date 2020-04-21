@@ -11,5 +11,8 @@
     <c:if test="false">
         <h1>single letter variable names are good</h1>
     </c:if>
+
+    <a href="login.jsp">login</a>|
+    <a href="profile.jsp">profile</a>
 </body>
 </html>
