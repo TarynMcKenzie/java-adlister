@@ -42,6 +42,27 @@ public class HelloWorldServlet extends HttpServlet {
         else
             out.println("<h1>Hello, World!</h1>");
 
+
+        // ---------------- INSTRUCTOR WALKTHROUGH --------------
+//        String pageHtml = "<h1>Hello, World!</h1>";
+//        //VERSION ONE
+//        //checks to see if parameter of name exists
+//
+//        if (request.getParameterMap().containsKey("name")) {
+//
+//            //sets name to String name
+//            String name = request.getParameter("name");
+//
+//            if (!name.equals("")) {
+//                System.out.println(name);
+//                pageHtml = "<h1>Hello, " + name + "!</h1>";
+//            }
+//        }
+//
+//        response.setContentType("text/html");
+//        PrintWriter out = response.getWriter();
+//        out.println(pageHtml);
     }
+
 
 }
