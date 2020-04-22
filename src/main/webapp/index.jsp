@@ -2,17 +2,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><%= "some title" %></title>
+    <title>Home</title>
+
 </head>
 <body>
-    <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
-    </c:if>
-    <c:if test="false">
-        <h1>single letter variable names are good</h1>
-    </c:if>
 
-    <a href="login.jsp">login</a>|
-    <a href="profile.jsp">profile</a>
+    <%-- ---- LINK TO NAVBAR ---- --%>
+    <%@ include file="/partials/navbar.jsp" %>
+
+    <h1>Home Page</h1>
+
+    <p>Hey all you cool cats and kittens.</p>
+
+
 </body>
 </html>

@@ -21,6 +21,7 @@
 <%
 
     if (request.getMethod().equalsIgnoreCase("post")) {
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
@@ -31,41 +32,66 @@
 
         } else
             response.sendRedirect("login.jsp");
+
     }
+
 %>
 
 <html>
-    <head>
-        <title>Title</title>
-    </head>
-    <body>
+<head>
+    <title>Login</title>
+</head>
+<body>
 
-        <%-- ---- LINK TO INDEX ---- --%>
-        <%@ include file="index.jsp" %>
+<%-- ---- LINK TO INDEX ---- --%>
+<%@ include file="/partials/navbar.jsp" %>
 
-        <%-- ---- HEADING ---- --%>
-        <h1>Account Login</h1>
+<article class="login-all">
 
 
-        <%-- ---- FORM ---- --%>
-        <form action="${pageContext.request.contextPath}/login.jsp" method="post">
+    <section class="login-card">
 
-            <%-- ---- USERNAME ---- --%>
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+        <section class="hello-world-section">
+            <h1>Account Login</h1>
+            <p>
+                I'm baby forage gentrify selvage, 90's crucifix bushwick man bun. Kale chips readymade lomo, food truck
+                blue
+                bottle aesthetic everyday carry.
+                Tote bag gochujang photo booth asymmetrical tofu raclette, live-edge offal farm-to-table iceland.
+            </p>
+
+            <%-- ---- SOCIAL BUTTONS ---- --%>
+            <div id="social-btns">
+                <input type="submit" value="Facebook" id="facebook-btn">
+                <input type="submit" value="Google" id="google-btn">
             </div>
 
-            <%-- ---- PASSWORD ---- --%>
-            <div>
-                <label for="pass">Password (8 characters minimum):</label>
-                <input type="password" id="pass" name="password"
-                       minlength="8" required>
-            </div>
+        </section>
 
-            <%-- ---- SUBMIT BUTTON ---- --%>
-            <input type="submit" value="Sign in">
-        </form>
+        <section class="login-section">
 
-    </body>
+            <%-- ---- FORM ---- --%>
+            <form action="${pageContext.request.contextPath}/login.jsp" method="post" class="login-form">
+
+                <%-- ---- USERNAME ---- --%>
+                <div class="username">
+                    <label for="username"></label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+
+                <%-- ---- PASSWORD ---- --%>
+                <div class="password">
+                    <label for="pass"></label>
+                    <input type="password" id="pass" name="password"
+                           minlength="8" required placeholder="Password">
+                </div>
+
+                <%-- ---- SUBMIT BUTTON ---- --%>
+                <input type="submit" value="Sign in" id="submit-btn">
+            </form>
+
+        </section>
+    </section>
+</article>
+</body>
 </html>

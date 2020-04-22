@@ -8,9 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-</head>
-<body>
+    <title>Navbar</title>
 
-</body>
+    <style type="text/css">
+        <%-- ---- LINK TO CSS STYLESHEET ---- --%>
+        <%@ include file="/partials/css/ad-lister-css.css" %>
+    </style>
+
+</head>
+    <body>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="login.jsp">Login</a></li>
+            </ul>
+        </nav>
+
+    </body>
 </html>

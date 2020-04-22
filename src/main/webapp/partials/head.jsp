@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>Title</title>
+
+    <link rel="stylesheet" href="css/ad-lister-css.css">
 </head>
 <body>
 
