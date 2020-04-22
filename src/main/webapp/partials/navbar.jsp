@@ -20,8 +20,8 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="login.jsp">Login</a></li>
+                <li><a href="webapp/index.jsp">Home</a></li>
+                <li><a href="webapp/login.jsp">Login</a></li>
             </ul>
         </nav>
 
