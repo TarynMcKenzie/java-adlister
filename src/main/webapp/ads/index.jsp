@@ -16,17 +16,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="../ads/index.jsp">
+    <jsp:include page="../partials/head.jsp">
         <jsp:param name="title" value="Welcome to our Ads!"/>
     </jsp:include>
 </head>
 <body>
+
     <jsp:include page="../partials/navbar.jsp"/>
 
+    <%-- Get the attribute "ads" set in the ShowAdsServlet--%>
     <c:forEach var="ad" items="${ads}">
         <div class="ad">
-            <h2>${ad.name}</h2>
-            <p>Price: $ ${ad.price}</p>
+            <%-- Get the name of the ad--%>
+            <h2>${ad.title}</h2>
+            <%-- Get the description of the ad --%>
+            <p>Description: ${ad.description}</p>
         </div>
     </c:forEach>
 

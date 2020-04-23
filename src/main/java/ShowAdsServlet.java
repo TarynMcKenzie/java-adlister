@@ -6,11 +6,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ShowAdsServlet", urlPatterns = "../ads/index")
+// This is what the user will type into chrome
+@WebServlet(name = "ShowAdsServlet", urlPatterns = "/ads")
 public class ShowAdsServlet extends HttpServlet {
 
+    // this is my magic: I am telling the browser what file to load
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         // Use the factory to get the dao object
         Ads adsDao = DaoFactory.getAdsDao();
         // Use a method on the dao to get all the products
@@ -18,6 +21,7 @@ public class ShowAdsServlet extends HttpServlet {
         // Pass the data to the jsp
         request.setAttribute("ads", ads);
 
-        request.getRequestDispatcher("..ads/index.jsp").forward(request, response);
+        request.getRequestDispatcher("ads/index.jsp").forward(request, response); // send the updates request and response to the jsp page
+
     }
 }

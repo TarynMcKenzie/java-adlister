@@ -3,13 +3,16 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="Welcome to Adlister!"/>
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
-    <div class="container">
-        <h1>Welcome to the Adlister!</h1>
-    </div>
+<%-- ---- LINK TO NAVBAR ---- --%>
+<%@ include file="/partials/navbar.jsp" %>
+
+<h1>Home Page</h1>
+
+<p>Hey all you cool cats and kittens.</p>
+
 </body>
 </html>

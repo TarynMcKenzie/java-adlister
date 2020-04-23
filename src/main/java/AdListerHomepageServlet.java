@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "AdListerHomepageServlet", urlPatterns = "/")
+public class AdListerHomepageServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
