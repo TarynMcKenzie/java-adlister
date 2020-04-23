@@ -10,9 +10,11 @@
 <%-- ---- LINK TO NAVBAR ---- --%>
 <%@ include file="/partials/navbar.jsp" %>
 
-<h1>Home Page</h1>
+<article class="content-body">
+    <h1>Home Page</h1>
 
-<p>Hey all you cool cats and kittens.</p>
+    <p>Hey all you cool cats and kittens.</p>
+</article>
 
 </body>
 </html>

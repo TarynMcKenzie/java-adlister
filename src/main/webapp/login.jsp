@@ -8,6 +8,7 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp" />
+
 <article class="login-all">
 
 

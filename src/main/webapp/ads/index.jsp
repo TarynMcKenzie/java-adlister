@@ -24,6 +24,7 @@
 
     <jsp:include page="../partials/navbar.jsp"/>
 
+    <article class="content-body">
     <%-- Get the attribute "ads" set in the ShowAdsServlet--%>
     <c:forEach var="ad" items="${ads}">
         <div class="ad">
@@ -33,6 +34,7 @@
             <p>Description: ${ad.description}</p>
         </div>
     </c:forEach>
+    </article>
 
 </body>
 </html>
