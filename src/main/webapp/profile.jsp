@@ -8,9 +8,16 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-    <div class="container">
-        <h1>Viewing your profile.</h1>
-    </div>
+    <Article class="user-profile">
+        <%-- ---- PROFILE ---- --%>
+        <img src="./partials/img/linnea-sandbakk-yLaZQBDa6WM-unsplash.jpg" alt="User image placeholder" id="user-img">
+        <h2>Welcome back username!</h2>
+        <h4>Bio</h4>
+        <p>
+            I'm baby vinyl VHS knausgaard, heirloom neutra vice flannel ugh. Viral drinking vinegar salvia, thundercats everyday carry scenester meh fashion axe sriracha.
+            Keytar tote bag XOXO twee occupy, etsy glossier humblebrag. Tofu portland helvetica venmo flannel deep v blog, cred cray gochujang.
+        </p>
+    </Article>
 
 </body>
 </html>
