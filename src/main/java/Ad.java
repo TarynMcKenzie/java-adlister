@@ -1,4 +1,10 @@
 public class Ad {
+
+    // =================================
+    // =========== THE BEAN ============
+    // =================================
+
+
     private long id;
     private long userId;
     private String title;

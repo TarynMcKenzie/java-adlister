@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.content-body{
+    margin-left: 25%;
+    padding: 100px 16px;
+    height: 1000px;
+}
+
+/*-----------NAVBAR------------*/
+ul {
+    z-index: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 30px;
+    background-color: #333;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#logout-link{
+    color: #de5246;
+}
+
+/*-----------SEARCH NAVBAR------------*/
+
+.search-navbar input[type=text] {
+    width: 300px;
+    margin: 20px;
+    float: right;
+    border: lightgrey solid 1px;
+}
+.search-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+
+}
+#filter-icon{
+    height: 30px;
+    width: auto;
+    float: right;
+    margin: 20px 0;
+}
+
+/*-----------LOGIN FORM------------*/
+.login-all {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+input[type="text"],input[type="password"] {
+    display: block;
+    width: 309px;
+    height: 35px;
+    margin: 30px auto;
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+    border: 2px solid #1abc9d
+}
+
+input[type="submit"]{
+    display: block;
+    background: #1abc9d;
+    width: 314px;
+    padding: 12px;
+    cursor: pointer;
+    color: #fff;
+    border: 0px;
+    margin: auto;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background: #09cca6
+}
+
+
+
+/*-----------LOGIN SECTION------------*/
+
+.login-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    grid-area: 1 / 2 / 2 / 3;
+
+    height: 600px;
+    width: 900px;
+
+    margin: 50px;
+}
+
+.login-section{
+    color: white;
+    background: #333;
+    padding: 180px 50px;
+}
+
+
+/*-----------HELLO WORLD SECTION------------*/
+.hello-world-section{
+    background: whitesmoke;
+    padding: 150px 50px;
+}
+.hello-world-section h1{
+    font-size: 3em;
+    margin: 10px 0;
+}
+.hello-world-section p{
+    margin-bottom: 50px;
+}
+
+/*-----------SOCIAL------------*/
+#social-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#facebook-btn{
+    background: #3b5998;
+    margin: 20px 0;
+    width: 160px;
+}
+#google-btn{
+    background: #de5246;
+    margin: 20px 0;
+    width: 160px;
+}
+
+#facebook-btn:hover{
+    background: #527cd5;
+    margin: 20px 0;
+}
+#google-btn:hover{
+    background: #fa5d50;
+    margin: 20px 0;
+}
+
+/*-----------USER PROFILE------------*/
+#user-img{
+    margin: 50px 0px;
+    height: 150px;
+    width: auto;
+}
+.user-profile{
+    margin: 100px 50px;
+    width: 500px;
+}
+#profile-header{
+    margin: 50px 50px;
+    text-align: center;
+}
