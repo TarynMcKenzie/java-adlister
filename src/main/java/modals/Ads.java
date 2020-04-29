@@ -1,3 +1,5 @@
+package modals;
+
 import java.util.List;
 
 public interface Ads {
