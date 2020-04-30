@@ -25,7 +25,7 @@ public class MySQLAdsDao implements Ads {
                     configuration.getPassword()
             );
 
-        }catch (SQLException e) {
+        } catch (SQLException e) {
 
             // ERROR MESSAGE IF CANNOT CONNECT
             throw new RuntimeException("Cannot connect to the database", e);
@@ -52,9 +52,9 @@ public class MySQLAdsDao implements Ads {
             while (rs.next()) {
                 output.add(
                         new Ad(
-                                rs.getLong("id"), // id
-                                rs.getLong("userId"), //first-name
-                                rs.getString("title"), //last-name
+                                rs.getLong("id"),
+                                rs.getLong("user_id"),
+                                rs.getString("title"),
                                 rs.getString("description")
                         )
                 );
@@ -70,34 +70,48 @@ public class MySQLAdsDao implements Ads {
 
         // we need to insert that info into a new row in the database, then return the generated id (Primary key)
         // Instantiate a new Contact Object
-        //INSERT INTO contacts (username, title, description) values ('%s', '%s', '%s')"
+        //INSERT INTO ads (user_id, title, description) values ('%s', '%s', '%s')"
         long newlyCreatedUserId = 0;
 
-        String addContactQuery = String.format("INSERT INTO contacts (username, title, description) VALUES ('%s', '%s', '%s')",
+        String addContactQuery = String.format("INSERT INTO ads (user_id, title, description) VALUES ('%s', '%s', '%s')",
                 ad.getUserId(),
                 ad.getTitle(),
                 ad.getDescription()
         );
+
         try {
             Statement stmt = connection.createStatement();
             // NOW let's actually execute this SQL query to add the new contact to our database
+
             stmt.executeUpdate(addContactQuery, Statement.RETURN_GENERATED_KEYS);
             // If we add Statement.RETURN_GENERATED_KEYS, we can work with the actual MySQL DB table row ID's, and reassign those ID's to our Contact objects here in our Java code
-            long insertedRowId = 0;
             ResultSet ks = stmt.getGeneratedKeys();
+
             if (ks.next()) {
                 newlyCreatedUserId = ks.getLong(1); // This will save the MySQL row ID to a variable
                 System.out.println("The ID of the newly inserted row is: " + ks.getLong(1));
             }
+
             // Check to see if the id was returned, or if insertedRowId is still at its default of '0'
             if (newlyCreatedUserId != 0) {
                 ad.setId(newlyCreatedUserId);
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
         //return the newly inserted user's id
         return newlyCreatedUserId;
     }
+
+
+//    public static void main(String[] args) {
+//        // USE to test methods
+//            // 1. initialize objects
+//            // 2. use methods
+//            // 3. delete main or comment out
+//    }
 
 }
