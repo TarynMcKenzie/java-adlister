@@ -1,9 +1,25 @@
+package modals;
+
 public class Ad {
+
+    //---------------------------------------------
+    //-------------------AD BEAN-------------------
+    //---------------------------------------------
+
+
+    //--------INITIALIZE----------
     private long id;
     private long userId;
     private String title;
     private String description;
 
+
+    //--------ZERO ARGUMENT - CONSTRUCTOR METHOD----------
+    public Ad() {
+    } // Reserve space in memory
+
+
+    //--------CONSTRUCTOR METHOD----------
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
@@ -11,6 +27,7 @@ public class Ad {
         this.description = description;
     }
 
+    //--------CONSTRUCTOR METHOD (WITH ID)----------
     public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
