@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
@@ -32,7 +33,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         // CHECK HASHED PASSWORD FOR LOGIN
-        boolean validateAttempt = BCrypt.checkpw(password, BCrypt.gensalt(12));
+        boolean validateAttempt = Password.check(password, user.getPassword());
 
         if (validateAttempt) {
             request.getSession().setAttribute("user", user);
